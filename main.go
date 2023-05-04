@@ -40,3 +40,18 @@ func printShapeInfo(s shape) {
 	fmt.Printf("Area of %T is: %0.2f \n", s, s.area())
 	fmt.Printf("Circumference of %T is: %0.2f \n", s, s.circumference())
 }
+
+func main() {
+	shapes := []shape{
+		circle{radius: 2.5},
+		square{length: 4.2},
+		circle{radius: 7.8},
+		square{length: 19.9},
+	}
+
+	for _, v := range shapes {
+		fmt.Println("********")
+		printShapeInfo(v)
+		fmt.Println("********")
+	}
+}
